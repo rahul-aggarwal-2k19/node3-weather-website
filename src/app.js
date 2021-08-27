@@ -5,6 +5,7 @@ const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Goal: Create a partial for the footer
 /*
@@ -158,6 +159,6 @@ app.get("*", (req, res) => {
   4. Test your work, visit /what and /help/units
 */
 
-app.listen(3000, () => {
-  console.log("Server is up on port 3000.");
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}.`);
 });
